@@ -1,0 +1,24 @@
+import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+class UserLocation {
+  Position currentLocation;
+  LatLng latLng;
+  Future<Position> locateUser() async {
+    return Geolocator()
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+  }
+
+  getUserLocation() async {
+    currentLocation = await locateUser();
+    latLng = LatLng(currentLocation.latitude, currentLocation.longitude);
+  }
+
+  LatLng getLatLng() {
+    return latLng;
+  }
+
+  updateLatLng() {
+    getUserLocation();
+  }
+}

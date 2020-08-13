@@ -1,0 +1,55 @@
+*1-finish api usage
+*2-create meeting operation(screens, real time pusher or database,everything..)
+*3-review
+*4-notification
+*5-update ride and update request
+*6-Clean code, update api naming
+7-ui upgrade + tests +some documention + verification
+*8-there is time? add some features..
+*features : *notifications using database & *stream,
+	   profile photos 
+*Error Handling 
+*Cancel request, ride.
+
+we used git, flutter, laravel, pusher, google maps, 
+
+Ask about documentation cause we gonna deliver it at sunday
+ERD , Sequence, update functional add notification...
+بص اللي انا فاهمه لحد دلوقتي إن 
+احنا المفترض هنخلص الكود بالتيست كيسز و كله
+هنعمل الدكيومنتيشن و نخلصه
+هنسلم الدكيومنتيشن قبل يوم 12/8 للاكونت ده اونلاين eg.edu.cu-fci@moukhtar.b و هنكتب كود المشروع في subject اللي هو هيبقي SUN04_02
+إن شاء الله
+هنروح الكلية نودي نسخة ورق من الدكيومنتيشن و cd عليه الكود و الدكيومنتيشن بردو قبل يوم 13/8
+هنتواصل مع المعيدة م:ماهيتاب سعدونى  و ده الاكونت بتاعها m.saadony@fci-cu.edu.eg
+عشان هنناقش الكود يوم 12/8
+هنناقش المشروع إن شاء الله يوم الاحد 16/8 من الساعة 10الصبح لحد الساعة 12
+
+
+أبعت الدكيومنتيشن 
+اعمل الفيرفاي 
+سجل الفيديو 
+
+
+    *Route::post('/register', 'UserController@register');
+    *Route::get('/showNotifications', 'NotificationController@showNotifications');
+    *Route::get('/getUnReadNotificationsCount', 'NotificationController@getUnReadNotificationsCount');
+    *Route::post('/calcUserTotalReview', 'UserController@calcUserTotalReview');
+    *Route::get('/user', 'UserController@getById');
+    *Route::put('/user', 'UserController@edit');
+    *Route::delete('/user', 'UserController@destroy');
+
+
+    *Route::get('/allRequests', 'RequestsController@index');
+    *Route::post('/request', 'RequestsController@store');
+    *Route::put('/request', 'RequestsController@update');
+    *Route::delete('/request', 'RequestsController@destroy');
+
+    *Route::get('/allRides', 'RidesController@index');
+    *Route::get('/availableRides', 'RidesController@viewAvailableRides');
+    *Route::put('/acceptRequest', 'RidesController@acceptRequest');
+    *Route::post('/ride', 'RidesController@store');
+    *Route::delete('/ride', 'RidesController@destroy');
+    *Route::put('/ride', 'RidesController@update');
+
+    *Route::post('/sendNotification', 'NotificationController@send');
